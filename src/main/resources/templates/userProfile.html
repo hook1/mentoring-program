@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>UserProfile</title>
+    <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css" th:href="@{/static/css/lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="/static/css/userEdit.css" th:href="@{/static/css/userEdit.css}"/>
+</head>
+
+<body>
+
+
+<div class="all-wraper">
+    <header class="header" th:replace="fragments/header :: header"></header>
+    <div class="container ">
+        <div class="edit-profile-wrap">
+            <div class="fixed-buttons">
+                <div class="user-profile-buttons">
+                    <a href="#">
+                        <button class="btn-lg btn-success" type="button">cancel</button>
+                    </a>
+                    <button class="btn-lg btn-success" type="button">Save</button>
+                </div>
+            </div>
+            <div class="photo-block">
+                <div class="photo" style="background-image: url('../../static/images/ava.png')"><!---->
+                    <!-- <img src="../../static/images/admin.png" alt="">-->
+                </div>
+                <div class="btn btn-success file">choose</div>
+            </div>
+
+            <div class="profile-container-wrap">
+                <div class="left">
+                    <form class="info-block" action="">
+                        <h3 class="subtitle">Main information</h3>
+                        <div class="field-block">
+                            <span class="labels required">Your FirstName</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="firstName" id="firstName"
+                                       placeholder="Enter your Name" th:value="*{firstName}"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="right">
+                    <div class="info">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.js" th:src="@{/static/js/lib/jquery.js}"></script>
+<script src="/static/js/bootstrap.min.js" th:src="@{/static/js/lib/bootstrap.min.js}"></script>
+</body>
+
+</html>

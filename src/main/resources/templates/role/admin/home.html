@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="adminApp" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Agmin Page</title>
+
+    <link href="/static/css/lib/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/static/css/lib/bootstrap.min.css}"/>
+
+    <link href="/static/css/admin/admin.css" rel="stylesheet"
+          th:href="@{/static/css/admin/admin.css}"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!--<link href="../../../../resources/css/font-awesome.min.css" rel="stylesheet"
+          th:href="@{/resources/css/font-awesome.min.css}"/>-->
+
+    <!-- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+
+    <!--  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">-->
+
+
+</head>
+
+<body ng-controller="UsersController">
+
+<div class="all-wrapper">
+    <div class="header">
+        <header th:replace="fragments/header :: header"></header>
+    </div>
+    <div class="body-wrapper">
+        <div class="left">
+            <ul>
+                <li><a href="">groups</a></li>
+                <li><a href="">lectures</a></li>
+                <li><a href="">programs</a></li>
+                <li><a href="/admin/home/getAllUsers" th:href="@{/admin/home/getAllUsers}">users</a></li>
+            </ul>
+        </div>
+        <div class="right" ng-cloak="">
+
+            <table class="table" ng-cloak="" id="users">
+                <tr>
+                    <th><a href="" ng-click="orderByField='f_name'; reverseSort = !reverseSort">first Name</a></th>
+                    <th><a href="" ng-click="orderByField='l_name'; reverseSort = !reverseSort">last Name</a></th>
+                    <th><a href="" ng-click="orderByField='email'; reverseSort = !reverseSort">email</a></th>
+                </tr>
+                <tr ng-repeat="user in users  | filter: searchKeyword | orderBy:orderByField:reverseSort">
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <!--<td><input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(company.name)" /></td>-->
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Angular Material Dependencies -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+
+<!--<script type="text/javascript" src="webjars/bootstrap-material-design/0.2.1/js/material.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
+
+<script src="../../../../static/js/lib/jquery.js" th:src="@{/static/js/lib/jquery.js}"></script>
+<script src="../../../../static/js/lib/bootstrap.min.js" th:src="@{/static/js/lib/bootstrap.min.js}"></script>
+<script src="../../../../static/js/admin/admin.js" th:src="@{/static/js/admin/admin.js}"></script>
+
+<!-- Angular Material Dependencies -->
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
+
+<!--<script src="../../../../resources/js/admin/admin.js" th:src="@{/resources/js/admin/admin.js}"></script>-->
+</body>
+
+</html>

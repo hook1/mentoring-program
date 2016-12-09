@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home page</title>
+    <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css" th:href="@{/static/css/lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="/static/css/header.css" th:href="@{/static/css/header.css}"/>
+
+
+</head>
+<body>
+<div class="all-wraper">
+    <header class="header" th:include="fragments/header :: header"></header>
+
+
+    <div class="container">
+        <p><h4>user</h4></p>
+
+    </div>
+
+</div>
+<script src="/static/js/lib/jquery.js" th:src="@{/static/js/lib/jquery.js}"></script>
+<script src="/static/js/lib/bootstrap.min.js" th:src="@{/static/js/lib/bootstrap.min.js}"></script>
+</body>
+</html>

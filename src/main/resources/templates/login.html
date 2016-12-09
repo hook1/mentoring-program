@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sing in</title>
+
+    <link rel="stylesheet" th:href="@{/static/css/lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/static/css/login.css}"/>
+
+
+</head>
+<body>
+<div class="all-wraper">
+    <header class="header" th:replace="fragments/header :: header"></header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-form">
+                <p th:if="${loginError}" class="error">Wrong user or password</p>
+                <form th:action="@{/login}" method="post">
+                    <div class="input-group input-sm">
+                        <lable class="input-group input-addon" for="username">
+                            <i class="fa fa-user"></i>
+                        </lable>
+                        <input type="text" class="form-control" id="username" name="username"
+                               placeholder="Enter username or email">
+                        </input>
+                    </div>
+                    <div class="input-group input-sm">
+                        <lable class="input-group input-addon" for="password"><i class="fa fa-lock"></i></lable>
+                        <input class="form-control" type="password" id="password" name="password"
+                               placeholder="Enter password"/>
+                    </div>
+                    <div class="input-group input-sm">
+                        <div class="check-box">
+                            <lable><input type="checkbox" id="rememberme" name="remember-me"/> Remember Me</lable>
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="submit" class="btn btn-block btn-primary btn-default" value="Log in"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script th:src="@{/static/js/lib/jquery.js}"></script>
+<script th:src="@{/static/js/lib/bootstrap.min.js}"></script>
+</body>
+</html>

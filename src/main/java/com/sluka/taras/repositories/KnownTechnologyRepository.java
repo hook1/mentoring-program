@@ -1,0 +1,14 @@
+package com.sluka.taras.repositories;
+
+import com.sluka.taras.common.model.KnownTechnology;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+/**
+ * Created by taras on 08.11.2016.
+ */
+@Repository
+@Qualifier(value = "knownTechnologyRepository")
+public interface KnownTechnologyRepository extends JpaRepository<KnownTechnology, Long> {
+}

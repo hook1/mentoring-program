@@ -1,0 +1,107 @@
+<!DOCTYPE>
+<html ng-app="homeUser" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>User Page</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+    <link href="../../../../resources/css/lib/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/resources/css/lib/bootstrap.min.css}"/>
+
+    <link href="../../../../resources/css/userHome.css" rel="stylesheet"
+          th:href="@{/resources/css/userHome.css}"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+           rel="stylesheet">-->
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+     <link rel='stylesheet prefetch'
+           href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css'>
+     <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.1/docs.css'>-->
+</head>
+<body>
+<div class="all-wrapper">
+    <!-- <div class="container">-->
+    <header class="header-wrapper">
+        <nav class="navbar navbar-white">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                </div>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                        <i class="fa fa-bars"></i>
+                        <ul class="dropdown-menu">
+                            <li><a class="md-trigger ajax-modal profile_link" type="button"
+                                   data-modal="main-modal-window" data-target="#main-modal-window"
+                                   data-toggle="modal"
+                                   data-header="User NAme" data-width="1100" data-url="/profile">Profile</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="/logout">Sign Out</a></li>
+                        </ul>
+                    </a>
+
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="main-wrapper">
+
+    </main>
+    <footer class="footer-wrapper" ng-controller="SidebarController">
+        <div>
+            <a href="#" id="navigation-toggle" ng-click="toggleState()">Navigation</a>
+
+        </div>
+        <div class="container">
+            <div>
+                <div class="sidebar" sidebar-directive="state">
+                    <ul class="navigation">
+                        <li class="navigation-items"><a href="#">Link1</a>
+                        </li>
+                        <li class="navigation-items"><a href="#">Link2</a>
+                        </li>
+                        <li class="navigation-items"><a href="#">Link3</a>
+                        </li>
+                        <li class="navigation-items"><a href="#">Link4</a>
+                        </li>
+                        <li class="navigation-items"><a href="#">Link4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!--</div>-->
+
+<script src="../../../../resources/js/userHome.js" th:src="@{/resources/js/userHome.js}"></script>
+<script src="../../../../resources/js/lib/jquery.js" th:src="@{/resources/js/lib/jquery.js}"></script>
+<script src="../../../../resources/js/lib/bootstrap.min.js" th:src="@{/resources/js/lib/bootstrap.min.js}"></script>
+
+<script>
+
+
+</script>
+
+<!--<script src="../../../../resources/js/user.home.js" th:src="@{/resources/js/user.home.js}"></script>-->
+<!--<script src="../../../../resources/js/angluar.min.js" th:src="@{/resources/js/angluar.min.js}"></script>-->
+
+</body>
+</html>

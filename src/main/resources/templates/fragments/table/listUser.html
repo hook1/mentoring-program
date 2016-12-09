@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../resources/css/bootstrap.min.css"
+          th:href="@{/resources/css/lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../resources/css/table.css"
+          th:href="@{/resources/css/table.css}"/>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th>f_name</th>
+        <th>l_name</th>
+        <th>userName</th>
+        <th>email</th>
+        <th>birthDay</th>
+        <th>password</th>
+        <th>role</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr data-th-each="user: ${users}">
+        <td data-th-text="${user.firstName}"></td>
+        <td data-th-text="${user.lastName}"></td>
+        <td data-th-text="${user.username}"></td>
+        <td data-th-text="${user.email}"></td>
+        <td data-th-text="${user.birthDay}"></td>
+        <td data-th-text="${user.password}"></td>
+        <td data-th-text="${user.role}"></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

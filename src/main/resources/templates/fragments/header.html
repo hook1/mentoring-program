@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/lib/bootstrap.min.css"
+          th:href="@{/static/css/lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../static/css/header.css" th:href="@{/static/css/header.css}"/>
+</head>
+<body>
+<div id="all_wrap">
+    <div id="header_wrap">
+        <nav class="navbar navbar-white" th:fragment="header">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/home" th:href="@{/home}">Mentoring program</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                    <!--<form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>-->
+                    <div class="head_nav_item_right">
+                        <ul class="nav navbar-nav navbar-right">
+
+
+                            <!-- <li><a href="../role/mentor/home.html" th:href="@{/mentor/home}">mentor</a></li>
+                             <li><a href="../role/mentee/home.html" th:href="@{/mentee/home}">mentee</a></li>
+                             <li><a href="../role/lector/home.html" th:href="@{/lector/home}">lector</a></li>-->
+                            <li><a href="../role/admin/home1.html" th:href="@{/admin/home}">admin</a></li>
+                            <li><a href="registration.html}" th:href="@{/registration}">Registration</a></li>
+                            <li><a href="login.html" th:href="@{/login}">Log in</a></li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Tarasasdasd Sluka
+                                    <img class="img img-circle" src="/static/images/user/anonymous/user-24x24.png"/>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/userProfile" th:href="@{/userProfile}">My profile</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/editUser" th:href="@{/editUser}">Edit</a></li>
+                                    <li><a href="#">Setting</a></li>
+                                    <li><a href="#">Help</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Log out</a></li>
+                                </ul>
+
+                            </li>
+
+                            <!--<ul>
+                                    <a id="top_profile_link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">
+                                        <li>
+                                            <div class="top_profile_img">
+                                                <img src="../../../resources/images/user/user-24x24.png">
+                                            </div>
+
+                                            <li>
+                                                <div class="top_profile_name">asdasd</div>
+                                            </li>
+                                            <ul class="dropdown-menu">
+                                                <div></div>
+                                                <li><a href="#">My profile</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Edit</a></li>
+                                                <li><a href="#">Setting</a></li>
+                                                <li><a href="#">Help</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Log out</a></li>
+                                            </ul>
+
+
+                                        </li>
+                                    </a>-->
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+</div>
+<script src="/static/js/lib/jquery.js" th:src="@{/static/js/lib/jquery.js}"></script>
+<script src="/static/js/lib/bootstrap.min.js" th:src="@{/static/js/lib/bootstrap.min.js}"></script>
+</body>
+
+</html>

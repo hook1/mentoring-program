@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>editUser</title>
+
+    <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css" th:href="@{/static/css/lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="/static/css/userEdit.css" th:href="@{/static/css/userEdit.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!--
+
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css">
+    <link rel="stylesheet" href="https://material.angularjs.org/1.1.1/docs.css">
+
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+-->
+
+
+</head>
+
+<body>
+
+<div class="all-wraper">
+    <header class="header" th:replace="fragments/header :: header"></header>
+    <div class="container ">
+        <div class="edit-profile-wrap">
+            <div class="fixed-buttons">
+                <div class="user-profile-buttons">
+                    <a href="#">
+                        <button class="btn-lg btn-success" type="button">cancel</button>
+                    </a>
+                    <button class="btn-lg btn-success" type="button">Save</button>
+                </div>
+            </div>
+            <div class="photo-block">
+                <div class="photo" style="background-image: url('../../static/images/ava.png')">
+                    <!---->
+                    <!-- <img src="../../static/images/admin.png" alt="">-->
+                </div>
+                <div class="btn btn-success file">choose</div>
+            </div>
+
+            <div class="    profile-container-wrap">
+                <div class="left">
+                    <form class="info-block" action="">
+                        <h3 class="subtitle">Main information</h3>
+                        <div class="field-block">
+                            <span class="labels required">First Name</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="firstName" id="firstName"
+                                       placeholder="Enter your Fitst Name" th:value="*{firstName}"/>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">Last Name</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="lastName" id="lastName"
+                                       placeholder="Enter your Last Name" th:value="*{lastName}"/>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">Email</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="email" id="firstName"
+                                       placeholder="Enter your email" th:value="*{email}"/>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">Username</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="username" id="username"
+                                       placeholder="Enter your username" th:value="*{username}"/>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">Birthday</span>
+                            <div class="field-block-content">
+                                <div class="uui-datepicker">
+                                    <input type="text" class="form-element" data-date-format="dd/mm/yyyy"
+                                           name="birthday" id="birthday" placeholder="dd/mm/yyyy"
+                                           th:value="*{birthday}"></input>
+                                    <button id="datepicker1" type="button"
+                                            class="ui-datepicker-trigger fa fa-calendar"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">phone number</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="phoneNumber" id="phoneNumber"
+                                       placeholder="phone number" th:value="*{username}"/>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">home number</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="homeNumber" id="homeNumber"
+                                       placeholder="home number" th:value="*{homeNumber}"/>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">work number</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="workNumber" id="workNumber"
+                                       placeholder="work number" th:value="*{workNumber}"/>
+                            </div>
+                        </div>
+                        <div class="field-block">
+                            <span class="labels required">skype</span>
+                            <div class="field-block-content">
+                                <input type="text" class="form-element" name="skype" id="skype" placeholder="skype"
+                                       th:value="*{skype}"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="right">
+                    <div class="info">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.js" th:src="@{/static/js/lib/jquery.js}"></script>
+<script src="/static/js/bootstrap.min.js" th:src="@{/static/js/lib/bootstrap.min.js}"></script>
+<script src="/static/js/editUser.js" th:src="@{/static/js/editUser.js}"></script>
+</body>
+
+</html>

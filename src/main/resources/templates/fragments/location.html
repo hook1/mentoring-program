@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="location" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>location</title>
+
+    <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css" th:href="@{/static/css/lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="/static/css/userEdit.css" th:href="@{/static/css/userEdit.css}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body>
+<div class="all-wraper">
+    <header class="header" th:replace="fragments/header :: header"></header>
+    <div class="container ">
+        <div class="profile-container-wrap">
+            <form class="info-block" action="">
+                <div class="field-block">
+                    <span class="labels required">country</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="country" id="country" placeholder="country"
+                               th:value="*{country}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">region</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="region" id="region" placeholder="region"
+                               th:value="*{region}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">area</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="area" id="area" placeholder="area"
+                               th:value="*{area}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">city</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="city" id="city" placeholder="city"
+                               th:value="*{city}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">streat</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="streat" id="streat" placeholder="streat"
+                               th:value="*{streat}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">building</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="building" id="building" placeholder="building"
+                               th:value="*{building}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">building_addidationaly</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="building_addidationaly"
+                               id="building_addidationaly" placeholder="building addidationaly"
+                               th:value="*{building_addidationaly}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">level</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="level" id="level" placeholder="level"
+                               th:value="*{level}"/>
+                    </div>
+                </div>
+                <div class="field-block">
+                    <span class="labels required">offise</span>
+                    <div class="field-block-content">
+                        <input type="text" class="form-element" name="offise" id="offise" placeholder="offise"
+                               th:value="*{offise}"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/static/js/jquery.js" th:src="@{/static/js/lib/jquery.js}"></script>
+<script src="/static/js/bootstrap.min.js" th:src="@{/static/js/lib/bootstrap.min.js}"></script>
+<script src="/static/js/editUser.js" th:src="@{/static/js/editUser.js}"></script>
+</body>
+
+</html>
