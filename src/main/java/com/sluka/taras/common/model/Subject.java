@@ -21,8 +21,8 @@ public class Subject extends BaseEntity {
     private Technology technology;
 
     @ManyToOne
-    @JoinColumn(name = "levelTechnology_id")
-    private LevelTechnology levelTechnology;
+    @JoinColumn(name = "level_id")
+    private Level level;
 
     @OneToMany(mappedBy = "subject")
     private Set<Lecture> lectures = new HashSet<>();

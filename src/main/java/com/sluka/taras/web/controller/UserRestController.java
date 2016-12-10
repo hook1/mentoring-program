@@ -50,7 +50,7 @@ public class UserRestController {
         return new ResponseEntity(id, HttpStatus.OK);
     }
 
-    @PutMapping("/users/{id}")
+    @PutMapping("/users/w{id}")
     public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User user) {
         user = userService.update(user);
         if (null == user)

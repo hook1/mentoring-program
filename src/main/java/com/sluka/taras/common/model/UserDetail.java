@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 /**
@@ -15,6 +17,10 @@ import java.util.Date;
 public class UserDetail {
     @Embedded
     ContactDetail contactDetail;
+
+    @ManyToOne
+    @JoinColumn(name = "level_id")
+    private Level level;
     private Date birthday;
     private String img;
     /*@OneToOne(fetch = FetchType.LAZY)

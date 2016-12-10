@@ -1,4 +1,4 @@
-package com.sluka.taras.web.controller.registration;
+package com.sluka.taras.web.controller.logInUP;
 
 import com.sluka.taras.buisness.service.NotificationService;
 import com.sluka.taras.buisness.service.UserService;
@@ -21,10 +21,6 @@ public class RegistrationController {
     @Autowired
     private NotificationService notificationService;
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public String showRegistrationForm(RegistrationForm registrationForm) {
-        return "/registration";
-    }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String showRegistrationForm(@Valid RegistrationForm registrationForm, BindingResult bindingResult) {

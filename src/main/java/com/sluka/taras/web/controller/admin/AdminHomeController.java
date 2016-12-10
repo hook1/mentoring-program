@@ -23,7 +23,7 @@ public class AdminHomeController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/admin/home/getAllUsers", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/home", method = RequestMethod.GET)
     public
     @ResponseBody
     List<User> usersList() {
@@ -33,10 +33,6 @@ public class AdminHomeController {
         return userService.findAll();
     }
 
-    @RequestMapping(value = "/admin/home")
-    public String admin() {
-        return "/role/admin/home";
-    }
 
    /* @RequestMapping(value = "getAllUsers", method = RequestMethod.GET)
     public @ResponseBody String getAllUsers (ModelMap modelMap){

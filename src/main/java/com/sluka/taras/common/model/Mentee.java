@@ -12,7 +12,10 @@ import javax.persistence.*;
 @DiscriminatorValue("menteeparticipant")
 public class Mentee extends Participant {
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User mentee;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mentor_id")
     private Mentor mentor;

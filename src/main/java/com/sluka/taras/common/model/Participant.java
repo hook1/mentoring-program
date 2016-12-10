@@ -11,7 +11,6 @@ import javax.persistence.*;
 @Data
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
-@DiscriminatorValue(value = "participant")
 public class Participant extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)

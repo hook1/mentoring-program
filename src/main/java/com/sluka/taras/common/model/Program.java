@@ -14,8 +14,8 @@ import java.util.Set;
 public class Program extends BaseEntity {
 
     @ManyToOne
-    @JoinColumn(name = "programLevel_id")
-    private ProgramLevel programLevel;
+    @JoinColumn(name = "level_id")
+    private Level level;
 
     @ManyToMany
     @JoinTable(name = "program_subject", joinColumns = @JoinColumn(name = "program_id"), inverseJoinColumns = @JoinColumn(name = "subject_id"))

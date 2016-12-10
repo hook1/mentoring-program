@@ -4,7 +4,7 @@ var adminApp = angular.module("adminApp", ['ngResource']);
 adminApp.service('UsersService', function ($log, $http, $resource) {
     return {
         getAll: function () {
-            return $http.get("/admin/home/getAllUsers");
+            return $http.get("/admin/home");
         }
     }
 });
@@ -14,19 +14,3 @@ adminApp.controller('UsersController', function ($scope, $log, UsersService) {
         $scope.users = response.data;
     });
 });
-
-
-/*
- var adminApp = angular.module("adminApp", []);
- adminApp.controller("userCtrl", ['$scope', '$http',
- function ($scope, $http) {
- $http({
- method: 'GET',
- url: '/getAllUsers'
- }).success(function (data, status, headers, config) {
- $scope.profiles = data;
- }).error(function (data, status, headers, config) {
- alert("falure");
- })
- }])
- */

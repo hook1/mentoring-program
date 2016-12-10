@@ -1,6 +1,7 @@
 package com.sluka.taras.common.model;
 
 
+import com.sluka.taras.common.model.enums.Sex;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,6 +19,7 @@ public class User extends BaseEntity {
     private String userName;
     private String email;
     private String password;
+
     @Enumerated(EnumType.STRING)
     private Sex sex;
 

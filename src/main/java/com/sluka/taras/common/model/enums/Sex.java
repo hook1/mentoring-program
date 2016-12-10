@@ -1,4 +1,4 @@
-package com.sluka.taras.common.model;
+package com.sluka.taras.common.model.enums;
 
 /**
  * Created by taras on 09.12.2016.

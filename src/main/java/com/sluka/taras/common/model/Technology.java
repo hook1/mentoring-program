@@ -14,7 +14,8 @@ import java.util.List;
 @Data
 public class Technology extends BaseEntity {
     private String name;
-    @OneToMany(mappedBy = "levelTechnology")
+
+    @OneToMany(mappedBy = "level")
     private List<Subject> subjects = new ArrayList<>();
 
 }

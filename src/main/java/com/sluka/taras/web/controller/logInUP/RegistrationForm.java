@@ -1,4 +1,4 @@
-package com.sluka.taras.web.controller.registration;
+package com.sluka.taras.web.controller.logInUP;
 
 import lombok.Data;
 

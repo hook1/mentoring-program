@@ -2,10 +2,7 @@ package com.sluka.taras.common.model;
 
 import lombok.Data;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +14,10 @@ import java.util.Set;
 @DiscriminatorValue("mentorparticipant")
 public class Mentor extends Participant {
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User mentor;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "mentor")
     private Set<Mentee> mentee = new HashSet<>();
 }

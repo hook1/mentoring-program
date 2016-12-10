@@ -1,4 +1,4 @@
-package com.sluka.taras.buisness.dbLoader;
+package com.sluka.taras.dbLoader;
 
 
 import java.text.DateFormat;

@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  */
 @Entity
 @Data
-public class ProgramLevel extends BaseEntity {
+public class Level extends BaseEntity {
     String name;
     String description;
 }
