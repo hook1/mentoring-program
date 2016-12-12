@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Created by taras on 03.12.2016.
  */
-@Controller
+//@Controller
 public class UserProfile {
-    @Autowired
+//    @Autowired
     UserService userService;
 
-    @RequestMapping(value = "/editUser", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/editUser", method = RequestMethod.GET)
     public String editUser() {
         return "/editUser";
     }
@@ -22,5 +22,5 @@ public class UserProfile {
     @RequestMapping(value = "/userProfile", method = RequestMethod.GET)
     public String userProfile() {
         return "/userProfile";
-    }
+    }*/
 }

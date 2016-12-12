@@ -1,35 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="AdminAngularSpringApp" xmlns:th="http://www.thymeleaf.org">
+<!-- xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"-->
 
 <head>
     <title>Home page</title>
-    <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/static/css/header.css"/>
-
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/index.css"/>
+    <link rel="stylesheet" href="/css/userEdit.css"/>
+    <link rel="stylesheet" href="/css/userProfile.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
 </head>
+
 <body>
-<div class="all-wraper">
+<div class="all-wraper" id="all-wraper">
+    <div class="header-wrap">
+        <div class="logo-container">
+            <button class="menu-btn" id="menu-btn" type="button" href="#">
+                <!--onclick="openNav()"-->
+            </button>
+        </div>
 
-    <header class="header-wrap">
-    </header>
-    <div class="left-wrap">
-
+        <div class="profile-container">
+            <a href="#/groups">Groups</a>
+            <!-- <a href="/registration.html}" th:href="@{/registration}">Registration</a>
+             <a href="/login" th:href="@{/login}">Log in</a>-->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">Tarasasdasd Sluka
+                <img class="img img-circle" src="/static/images/user/anonymous/user-48x48.png"/>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#/userProfile">My profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#/userEditProfile">Edit</a></li>
+                <li><a href="#">Setting</a></li>
+                <li><a href="#">Help</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="content">
 
+
+    <div class="main" id="main">
+        <div class="content" ng-view="">
+            <h1>HOME</h1>
+        </div>
     </div>
 
 </div>
-<script src="/static/js/lib/jquery.js"></script>
-<script src="/static/js/lib/bootstrap.min.js"></script>
-<script src="/static/js/lib/angular/angular.js"></script>
+<div class="sidenav" id="sidenav">
+    <a id="close-menu-btn">&times;</a>
+    <li><a href="/groups">Groups</a></li>
+    <li><a href="#">Users</a></li>
+    <li><a href="#/cars">Programs</a></li>
+    <li>
+        <a href="#asdasd"></a>
+    </li>
+</div>
 
-<script src="/static/js/app.js"></script>
-<script src="/static/js/services.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+<script type="text/javascript" src="static/js/lib/jquery.js"></script>
+<script type="text/javascript" src="static/js/lib/bootstrap.min.js"></script>
 
-<script src="/static/js/controllers/RailwayStationController.js"></script>
-<script src="/static/js/controllers/CarController.js"></script>
-<script src="/static/js/controllers/TrainController.js"></script>
+<script type="text/javascript" src="static/js/lib/angular/angular.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>-->
+
+
+<script type="text/javascript" src="/js/admin.js"></script>
+<script type="text/javascript" src="/js/AdminAngularSpringApp.js"></script>
+
+<script type="text/javascript" src="/js/services.js"></script>
+<script type="text/javascript" src="/js/filters.js"></script>
+<script type="text/javascript" src="/js/directives.js"></script>
+<!--Controller-->
+<script type="text/javascript" src="/js/controller/UserProfileController.js"></script>
+<script type="text/javascript" src="/js/controller/GroupsController.js"></script>
+<script type="text/javascript" src="/js/controller/UserProfileEditController.js"></script>
 </body>
+
 </html>

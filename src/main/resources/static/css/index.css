@@ -1,0 +1,87 @@
+.all-wraper {
+    width: 100%;
+    padding: 0;
+    outline: none;
+    margin: 0;
+}
+
+.header-wrap {
+    /* padding-left: 30px; */
+    margin: 0 auto;
+    /* position: relative; */
+    height: 60px;
+    background: blue;
+}
+
+.logo-container {
+    padding-left: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.profile-container {
+    right: 10px;
+    padding-top: 6px;
+    padding-right: 100px;
+    display: inline-block;
+    position: absolute;
+}
+
+.profile-container a {
+    color: red;
+    font-size: 20px;
+}
+
+.menu-btn {
+    background: transparent url(../images/icon/ic_menu_black_24px.svg) no-repeat center center;
+    border: none;
+    height: 38px;
+    width: 36px;
+    border: 0;
+}
+
+.body-container {
+    background-color: aqua;
+    height: 500px;
+}
+
+.sidenav {
+    height: auto;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    left: 0;
+    background-color: #e7e7e7;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav li {
+    list-style-type: none;
+}
+
+.sidenav #close-menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
