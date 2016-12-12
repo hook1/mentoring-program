@@ -13,31 +13,31 @@ import java.util.Set;
 
 //@Service
 public class GenerateDB {
-    @Autowired
+//    @Autowired
     GroupsRepository groupsRepository;
-    @Autowired
+//    @Autowired
     LevelRepository levelRepository;
-    @Autowired
+//    @Autowired
     CategoryRepository categoryRepository;
-    @Autowired
+//    @Autowired
     LectureRepository lectureRepository;
-    @Autowired
+//    @Autowired
     LectureEventRepository lectureEventRepository;
-    @Autowired
+//    @Autowired
     LocationRepository locationRepository;
-    @Autowired
+//    @Autowired
     ProgramRepository programRepository;
-    @Autowired
+//    @Autowired
     SubjectRepository subjectRepository;
-    @Autowired
+//    @Autowired
     TechnologyRepository technologyRepository;
-    @Autowired
+//    @Autowired
     MentorRepository mentorRepository;
-    @Autowired
+//    @Autowired
     MenteeRepository menteeRepository;
-    @Autowired
+//    @Autowired
     private RoleRepository roleRepository;
-    @Autowired
+//    @Autowired
     private UserRepository userRepository;
 
     //    @PostConstruct

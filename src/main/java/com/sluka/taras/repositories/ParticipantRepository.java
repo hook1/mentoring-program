@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
  * Created by taras on 24.11.2016.
  */
 @Repository
-@Qualifier(value = "participantRepository")
 public interface ParticipantRepository extends JpaRepository<Participant, Long> {
 }

@@ -12,14 +12,14 @@ import java.util.List;
 /**
  * Created by taras on 07.12.2016.
  */
-@RestController
-@RequestMapping("/users/")
+//@RestController
+//@RequestMapping("/users/")
 public class UserRestController {
 
-    @Autowired
+//    @Autowired
     UserService userService;
 
-    @GetMapping("/users/")
+//    @GetMapping("/users/")
     public List getUsers() {
         System.out.println("=====================================================================================");
         for (User user : userService.findAll()) {
@@ -29,7 +29,7 @@ public class UserRestController {
         return userService.findAll();
     }
 
-    @GetMapping("/users/{id}")
+//    @GetMapping("/users/{id}")
     public ResponseEntity getUser(@PathVariable("id") Long id) {
         User user = userService.findById(id);
         if (user == null)
@@ -37,20 +37,20 @@ public class UserRestController {
         return new ResponseEntity(user, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/users")
+//    @PostMapping(value = "/users")
     public ResponseEntity createUser(@RequestBody User user) {
         userService.save(user);
         return new ResponseEntity(user, HttpStatus.OK);
     }
 
-    @DeleteMapping("/users{id}")
+//    @DeleteMapping("/users{id}")
     public ResponseEntity deleteUser(@PathVariable Long id) {
         if (null == userService.findById(id))
             return new ResponseEntity("No User found for Id" + id, HttpStatus.NOT_FOUND);
         return new ResponseEntity(id, HttpStatus.OK);
     }
 
-    @PutMapping("/users/w{id}")
+//    @PutMapping("/users/w{id}")
     public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User user) {
         user = userService.update(user);
         if (null == user)

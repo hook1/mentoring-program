@@ -13,6 +13,8 @@ public class NotificationServiceImpl implements NotificationService {
 
     public static final String NOTIFY_MSG_SESSION_KEY = "siteNotificationMessages";
 
+    // TODO: It's prohibited to use domen specific objects out of the its layer. E.g. you haven't user HTTP objects not
+    // in controllers
     @Autowired
     private HttpSession httpSession;
 

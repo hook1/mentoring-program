@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
  * Created by taras on 08.11.2016.
  */
 @Repository
-@Qualifier(value = "knownTechnologyRepository")
 public interface KnownTechnologyRepository extends JpaRepository<KnownTechnology, Long> {
 }

@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;

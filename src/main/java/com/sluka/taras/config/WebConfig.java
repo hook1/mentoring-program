@@ -7,25 +7,25 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-@Configuration
-@EnableAutoConfiguration
+//@Configuration
+//@EnableAutoConfiguration
 /*@ComponentScan(basePackages = "com.sluka.taras.*")*/
-@PropertySource({"classpath:application.properties"})
-public class WebConfig extends WebMvcConfigurerAdapter {
+//@PropertySource({"classpath:application.properties"})
+public class WebConfig /*extends WebMvcConfigurerAdapter*/ {
 
-    @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
-    }
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-        registry.addResourceHandler("/css/**").addResourceLocations("/css/");
-        registry.addResourceHandler("/js/**").addResourceLocations("/js/");
-        registry.addResourceHandler("/images/**").addResourceLocations("/images/");
-       /* registry.addResourceHandler("/webjars*").addResourceLocations("classpath:/META-INF/resources/webjars/");*/
-    }
+//    @Override
+//    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+//        configurer.enable();
+//    }
+//
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+//        registry.addResourceHandler("/css/**").addResourceLocations("/css/");
+//        registry.addResourceHandler("/js/**").addResourceLocations("/js/");
+//        registry.addResourceHandler("/images/**").addResourceLocations("/images/");
+//       /* registry.addResourceHandler("/webjars*").addResourceLocations("classpath:/META-INF/resources/webjars/");*/
+//    }
 
     /*@Override
     public void addViewControllers(ViewControllerRegistry registry) {

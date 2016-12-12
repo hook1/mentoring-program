@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
  * Created by taras on 26.11.2016.
  */
 @Repository
-@Qualifier(value = "subjectRepository")
 public interface SubjectRepository extends JpaRepository<Subject, Long> {
 }

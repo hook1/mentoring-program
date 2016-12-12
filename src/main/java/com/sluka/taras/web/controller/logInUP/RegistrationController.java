@@ -14,15 +14,15 @@ import javax.validation.Valid;
 /**
  * Created by taras on 09.11.2016.
  */
-@Controller
+//@Controller
 public class RegistrationController {
-    @Autowired
+//    @Autowired
     UserService userService;
-    @Autowired
+//    @Autowired
     private NotificationService notificationService;
 
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+//    @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String showRegistrationForm(@Valid RegistrationForm registrationForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             notificationService.addErrorMessage(

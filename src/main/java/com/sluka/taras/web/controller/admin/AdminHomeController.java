@@ -16,16 +16,16 @@ import java.util.List;
 /**
  * Created by taras on 14.11.2016.
  */
-@Controller
-@Transactional
+//@Controller
+//@Transactional
 public class AdminHomeController {
     private static final Logger logger = LoggerFactory.getLogger(AdminHomeController.class);
-    @Autowired
+//    @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/admin/home", method = RequestMethod.GET)
+//    @RequestMapping(value = "/admin/home", method = RequestMethod.GET)
     public
-    @ResponseBody
+//    @ResponseBody
     List<User> usersList() {
         for (User user : userService.findAll()) {
             user.getRoles().size();

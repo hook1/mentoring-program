@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
  * Created by taras on 07.11.2016.
  */
 @Repository
-@Qualifier(value = "locationRepository")
 public interface LocationRepository extends JpaRepository<Location, Long> {
 }

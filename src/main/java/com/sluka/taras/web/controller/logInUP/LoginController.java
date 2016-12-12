@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 /**
  * Created by taras on 09.11.2016.
  */
-@Controller
+//@Controller
 public class LoginController {
 
 }

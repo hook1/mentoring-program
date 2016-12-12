@@ -9,18 +9,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@EnableTransactionManagement
-@EnableConfigurationProperties
-@ComponentScan(basePackages = "com.sluka.taras")
-@EnableJpaRepositories(basePackages = "com.sluka.taras.repositories")
 @SpringBootApplication
-public class MentoringProgramApplication extends SpringBootServletInitializer {
+public class MentoringProgramApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(MentoringProgramApplication.class, args);
-    }
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(MentoringProgramApplication.class);
     }
 }
